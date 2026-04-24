@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>budgbunny</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" type="png" href="images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  
+  <body>
+    <div class="about">
+      <nav>
+        <div class="menu">
+          <div class="logo">
+            <img src="images/logo.jpeg" alt="bunny logo" />
+            <a href="#">BudgBunny</a>
+          </div>
+          <ul>
+            <li><a href="#abt">About</a></li>
+            <!-- <li><a href="#Services">Services</a></li> -->
+            <li><a href="#budget">Budget</a></li>
+            <li><a href="#tdl">To do list</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="paragraph" id="abt">
+        <h1 class="title">
+          Save Smarter,Invest easier Find <br />
+          Opportunity and get Things Done
+        </h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum vero,
+          adipisci at a, aspernatur nam asperiores dolorem,<br />
+          dicta unde eveniet laborum blanditiis esse illo reprehenderit
+          distinctio iusto iure doloribus neque.
+        </p>
+      </div>
+    </div>
+
+    <div class="im" id="budget">
+      <img src="images/programm.jpeg" alt="" />
+    </div>
+
+    <div id="Budget" style="padding: 100px 20px; text-align: center;">
+        <h1 style="color: #ffffff;">Budget Management</h1>
+        <p style="color: rgba(255,255,255,0.7);">Section coming soon! Here you will be able to track your expenses and savings.</p>
+    </div>
+
+      <div id="particles-js"></div>
+
+    <div class="container">
+        <div class="todo-app" id="tdl">
+            
+            <div class="stats-container">
+                <div class="details">
+                    <h2>Keep it Up!</h2>
+                    <p>Check off your tasks</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="progress-stats">
+                    <span id="numbers">0 / 0</span>
+                </div>
+            </div>
+
+            <h1>To-Do List</h1>
+
+            <form class="input-area" id="todo-form">
+                <input type="text" id="input-area" placeholder="Add a new task..." autocomplete="off" />
+                <button type="submit" id="add-task-btn"><i class="fa-solid fa-plus"></i></button>
+            </form>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="todos-container">
+                <ul id="task-list"></ul>
+                <img class="empty-image" id="empty-img" src="undraw_to_do_list.svg" alt="empty">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="Maghawry.js"></script>
+
+
+    <div class="center" id="offers">
+     <div class="center-box">
+        <div class="logo">
+           
+            <p>Best offers just for you</p>
+        </div>
+        <div class="find">
+
+        <h1>Find the best offers for your budget</h1>
+        <p class="sub">Recommended offers for you</p>
+
+
+        <input type="text" placeholder="Search for stores, categories or offers...">
+    </div>
+
+
+    <div class="cards-container">
+
+        <a href="https://www.talabat.com" target="_blank" class="card">
+            <img src="images/pic1.png">
+            <h3>Talabat Offer</h3>
+            <span class="offer">Use Code: SAVE50</span>
+        </a>
+
+        <a href="https://www.instashop.com" target="_blank" class="card">
+            <img src="images/pic2.jpg">
+            <h3>Instashop</h3>
+            <span class="offer">20% Discount</span>
+        </a>
+
+        <a href="https://elmenus.com" target="_blank" class="card">
+            <img src="images/pic3.jpg">
+            <h3>Elmenus</h3>
+            <span class="offer">Special Deals</span>
+        </a>
+
+        <a href="https://www.yodawy.com" target="_blank" class="card">
+            <img src="images/pic4.jpg">
+            <h3>yodawy</h3>
+            <span class="offer">Up to 30% Off</span>
+        </a>
+
+        <a href="https://www.uber.com" target="_blank" class="card">
+            <img src="images/pic5.jpg">
+            <h3>Uber</h3>
+            <span class="offer">Ride Discounts</span>
+        </a>
+
+        <a href="https://www.jumia.com.eg" target="_blank" class="card">
+            <img src="images/pic6.jpg">
+            <h3>Jumia</h3>
+            <span class="offer">Best Prices</span>
+        </a>
+
+    </div>
+    </div>
+
+    <div class="bunny" id="feedback">
+      <img src="images/Looney Tunes™ _ Merchandising oficial en Zazzle.jpeg" alt="bunny" class="rabit-img">
+    
+    <div class="feedback">
+      <h1>Your Feedback</h1>
+     <a href="#"><i class="fa-regular fa-face-smile"></i></a> 
+     <a href="#"> <i class="fa-regular fa-face-meh"></i></a>
+     <a href="#"><i class="fa-regular fa-face-frown"></i></a>
+      <div class="icons">
+        <a href="https://www.instagram.com/budg_bunny01?igsh=MXQ0dXdjYnIwcjdm-NA==:" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@budg_bunny01?_r=1&_t=ZS-95mZtzLmZXQ" target="_blank">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+    </div>
+        
+  </body>
+</html>

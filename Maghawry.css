@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a !important; /* Ensure dark background matches main page */
+    overflow: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.todo-app {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+h1 { text-align: center; margin-bottom: 25px; letter-spacing: 1px; }
+
+.stats-container {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.progress-bar-container {
+    width: 150px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #00f2fe;
+    box-shadow: 0 0 15px #00f2fe;
+    transition: 0.4s ease;
+}
+
+.progress-stats {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #00f2fe;
+    color: #0f0c29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+}
+
+.input-area { display: flex; gap: 12px; margin-bottom: 20px; }
+
+#input-area {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 12px 15px;
+    color: white !important; /* Force white text */
+    outline: none;
+    transition: 0.3s;
+}
+
+#input-area::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important; /* Force visible placeholder */
+}
+
+#input-area:focus { border-color: #00f2fe; background: rgba(255, 255, 255, 0.15); }
+
+#add-task-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #00f2fe;
+    color: #272258;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.4s;
+}
+
+#add-task-btn:hover {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 0 20px #00f2fe;
+}
+
+.filter-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.filter-btn.active {
+    opacity: 1;
+    background: rgba(0, 242, 254, 0.15);
+    border-color: #00f2fe;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+#task-list li {
+    list-style: none;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    animation: fadeIn 0.4s ease forwards;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#task-list li:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.check-circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #00f2fe;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+/* لما ادوس على المهمه بيحط خط على المهمه وبيغيلر لون الدايره */
+.checked .check-circle { background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
+.checked span { text-decoration: line-through; opacity: 0.5; }
+
+.actions i { cursor: pointer; margin-left: 12px; transition: 0.2s; }
+.fa-trash:hover { color: #ff4d4d; transform: scale(1.2); }
+.fa-pen-to-square:hover { color: #ffb800; transform: scale(1.2); }
+
+.empty-image { width: 150px; display: block; margin: 20px auto; opacity: 0.2; }
